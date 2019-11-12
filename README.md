@@ -21,5 +21,20 @@ https://flutter.dev/docs/get-started/install
 https://github.com/flutter/flutter
 
 
+```
+https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.9.1+hotfix.6-stable.tar.xz
 
-
+ cd ~/development
+ tar xf ~/Downloads/flutter_linux_v1.9.1+hotfix.6-stable.tar.xz
+ 
+ 
+ 
+  export PATH="$PATH:`pwd`/flutter/bin"
+  
+   flutter precache
+   
+   
+    flutter doctor
+    
+    
+ ```
