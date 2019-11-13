@@ -26,6 +26,10 @@ https://flutter.dev/docs/get-started/install
 https://github.com/flutter/flutter
 
 
+
+https://blog.khophi.co/setting-up-flutter-for-the-first-time-with-android-sdk/
+
+
 ```
 https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.9.1+hotfix.6-stable.tar.xz
 
