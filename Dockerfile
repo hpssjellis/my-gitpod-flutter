@@ -19,6 +19,7 @@ USER gitpod
 RUN mkdir -p /home/gitpod/rocksetta                                                                            \ 
     && mkdir -p /home/gitpod/rocksetta/logs                                                                    \ 
     && mkdir -p /home/gitpod/.android                                                                          \
+    && mkdir -p /home/gitpod/flutter                                                                          \
     && touch /home/gitpod/.android/repositories.cfg                                                            \
     && touch /home/gitpod/rocksetta/logs/mylogs.txt                                                            \
     && echo "Installation start, made some folders in /home/gitpod" >> /home/gitpod/rocksetta/logs/mylogs.txt  \
@@ -50,11 +51,27 @@ RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip   
     && chown -R gitpod:gitpod /home/gitpod/.android                               
 
 
+
+
+ENV ANDROID_SDK_ROOT /home/gitpod/flutter
+
+export PATH=${PATH}:/home/gitpod/flutter/bin
+
+WORKDIR /home/gitpod/flutter
+
+RUN wget https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.9.1+hotfix.6-stable.tar.xzp  \
+    && tar xf ~/Downloads/flutter_linux_v1.9.1+hotfix.6-stable.tar.xz                                                     \                                                             
+    && rm flutter_linux_v1.9.1+hotfix.6-stable.tar.xzp                                                                    \
+    && chmod -R 775 /home/gitpod/flutter                                                                                  \
+    && chown -R gitpod:gitpod /home/gitpod/flutter                              
+
+
 USER gitpod
 
 
 RUN  echo "Here is the android sdk" >> /home/gitpod/rocksetta/logs/mylogs.txt             \
      && ls -ls /home/gitpod/.android >> /home/gitpod/rocksetta/logs/mylogs.txt            \
+     && ls -ls /home/gitpod/flutter  >> /home/gitpod/rocksetta/logs/mylogs.txt            \
      &&  echo "Installation all done" >> /home/gitpod/rocksetta/logs/mylogs.txt          
 
 #RUN sysctl kernel.unprivileged_userns_clone=1
