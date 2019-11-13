@@ -45,7 +45,11 @@ flutter run -d web --web-port 8000
 
 
 
-.# Old notes that may be useful.
+# Old notes that may be useful.
+
+Official flutter gitpod site at 
+
+https://github.com/vtorres/gitpod-flutter
 
 
 
