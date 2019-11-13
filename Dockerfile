@@ -53,9 +53,7 @@ RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip   
 
 
 
-ENV ANDROID_SDK_ROOT /home/gitpod/flutter
-
-export PATH=${PATH}:/home/gitpod/flutter/bin
+ENV PATH ${PATH}:/home/gitpod/flutter/bin
 
 WORKDIR /home/gitpod/flutter
 
