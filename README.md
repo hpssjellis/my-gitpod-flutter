@@ -47,3 +47,17 @@ https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux
     
     
  ```
+
+
+other stuff
+
+
+https://flutter.dev/docs/development/tools/devtools/cli
+
+
+https://github.com/flutter/flutter/wiki/The-flutter-tool
+
+https://medium.com/flutter-community/flutter-and-the-command-line-a-love-story-a3648ef2411
+
+
+
