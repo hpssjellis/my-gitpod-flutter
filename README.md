@@ -9,6 +9,41 @@ For a fresh gitpod click (under development Nov 11, 2019)
 
 https://gitpod.io/#github.com/hpssjellis/my-gitpod-flutter
 
+
+
+```
+flutter create myfolder
+
+cd myfolder
+
+flutter run -d web --web-port 8000
+```
+
+
+
+
+
+
+
+
+
+.
+
+
+
+
+
+.
+
+
+
+
+
+
+.
+
+
+
 Will need these abilities
 
 bash
