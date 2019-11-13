@@ -5,9 +5,14 @@ my attempt to get flutter working. This uses a gitpod that is setup for apache c
 
 
 
-For a fresh gitpod click (under development Nov 11, 2019)
+For a fresh gitpod click (under development Nov 11, 2019, working nov 13th)
 
 https://gitpod.io/#github.com/hpssjellis/my-gitpod-flutter
+
+or use a pre-made snapshot (made on nov 13th, 2019)
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/0ee932d3-1a3a-4212-ad4c-0501a16644a2)
+
 
 
 
