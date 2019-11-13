@@ -4,6 +4,11 @@
 my attempt to get flutter working. This uses a gitpod that is setup for apache cordova, ionic, capacitor, electron mainly because it pre-installs the android sdk.
 
 
+
+For a fresh gitpod click (under development Nov 11, 2019)
+
+https://gitpod.io/#github.com/hpssjellis/my-gitpod-flutter
+
 Will need these abilities
 
 bash
