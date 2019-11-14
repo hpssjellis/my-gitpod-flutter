@@ -29,9 +29,9 @@ cd $wow4
 
 flutter build apk --debug
 
-cp /workspace/my-gitpod-flutter/$wow4/platforms/android/app/build/outputs/apk/debug/app-debug.apk /workspace/my-gitpod-flutter/public/$wow4-app-debug.apk
+cp /workspace/my-gitpod-flutter/$wow4/build/app/outputs/apk/debug/app.apk /workspace/my-gitpod-flutter/public/$wow4-app-debug.apk
 
-
+# /workspace/my-gitpod-flutter/joe/build/app/outputs/apk/debug
 
 qrcode -o /workspace/my-gitpod-flutter/public/qrout.png $(gp url 8001);
 echo "<br><img src='qrout.png'><br>" >> /workspace/my-gitpod-flutter/public/index.html
