@@ -63,15 +63,8 @@ tasks:
               chmod +x a03-cordova-copy-to-folder.sh                                                                    && 
               chmod +x a04-flutter-android-create.sh                                                                    && 
               chmod +x a05-flutter-web-app.sh                                                                           && 
-          
-          
-          
 
-     # flutter create mytestapp                                                            &&
-     # cd mytestapp                                                                        &&
-     # flutter build apk --debug                                                           &&
-    # flutter run -d web-server --web-port=8080 --web-hostname=0.0.0.0                    &&
-         
+        
               
               echo "Ending .gitpod.yml installation"                 &>> /workspace/my-gitpod-flutter/logs.txt     
               
