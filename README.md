@@ -60,6 +60,10 @@ Official flutter gitpod site at
 
 https://github.com/vtorres/gitpod-flutter
 
+examples at
+
+https://github.com/gitpod-io/flutter_stock_example
+
 
 
 Will need these abilities
