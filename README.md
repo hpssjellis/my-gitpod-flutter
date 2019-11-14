@@ -27,12 +27,18 @@ flutter create myfolder
 
 cd myfolder
 
+# Generate a Android apk file
+
+flutter build apk  --debug
+
+# Generate a web app
+
 flutter run -d web-server --web-port=8080 --web-hostname=0.0.0.0
 
 ```
 
 
-Se veral bash files have been set up to make things easier. To activate at the terminal type  
+Several bash files have been set up to make things easier. To activate at the terminal type  
 
 ```
 ./a04-flutter-android-create.sh
@@ -69,7 +75,7 @@ or
 latest nov 14, 2019
 
 ```
-flutter build --apk  --debug
+flutter build apk  --debug
 
 flutter run -d web-server --web-port=8080 --web-hostname=0.0.0.0
 
