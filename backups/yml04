@@ -22,7 +22,7 @@ tasks:
       flutter doctor
     command: |
       echo "Ready to go!"  
-      flutter myTestApp
+      flutter create myTestApp
       cd myTestApp
       flutter run -d web-server --web-port=8080 --web-hostname=0.0.0.0
       
