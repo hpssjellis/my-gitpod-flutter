@@ -47,6 +47,15 @@ flutter run -d web --web-port 8000
 
 # Old notes that may be useful.
 
+
+
+latest nov 14, 2019
+
+```
+flutter run -d web-server --web-port=8080 --web-hostname=0.0.0.0
+
+```
+
 Official flutter gitpod site at 
 
 https://github.com/vtorres/gitpod-flutter
