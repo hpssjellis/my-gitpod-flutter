@@ -21,7 +21,8 @@ flutter create myfolder
 
 cd myfolder
 
-flutter run -d web --web-port 8000
+flutter run -d web-server --web-port=8080 --web-hostname=0.0.0.0
+
 ```
 
 
