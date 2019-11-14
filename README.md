@@ -17,8 +17,7 @@ or use a pre-made snapshot (made on nov 13th, 2019) only has flutter web app cap
 
 Nov 14, 2019 snapshot flutter webapp, with android sdk and cordova bash files
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/f5559aa4-91ff-4fef-9529-5628d47f4ebb)
-
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/810fe853-5bb4-460f-bf21-081c7c95a1ab)
 
 
 
