@@ -22,8 +22,8 @@ tasks:
       flutter doctor
     command: |
       echo "Ready to go!"  
-      flutter create myTestApp
-      cd myTestApp
+      flutter create mytestapp
+      cd mytestapp
       flutter run -d web-server --web-port=8080 --web-hostname=0.0.0.0
       
 vscode:
