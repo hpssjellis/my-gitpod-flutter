@@ -31,8 +31,7 @@ flutter build apk --debug
 
 cp /workspace/my-gitpod-flutter/$wow4/build/app/outputs/apk/debug/app-debug.apk /workspace/my-gitpod-flutter/public/$wow4-app-debug.apk
 
-/workspace/my-gitpod-flutter/cool/build/app/outputs/apk/debug
-# /workspace/my-gitpod-flutter/joe/build/app/outputs/apk/debug
+
 
 qrcode -o /workspace/my-gitpod-flutter/public/qrout.png $(gp url 8001);
 echo "<br><img src='qrout.png'><br>" >> /workspace/my-gitpod-flutter/public/index.html
