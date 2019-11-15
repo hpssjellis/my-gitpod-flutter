@@ -8,16 +8,19 @@ ports:
 
 tasks:
   - before: |
+  
+   export ANDROID_SDK_ROOT="/workspace/my-gitpod-flutter/android-sdk/" 
+   export ANDROID_HOME="/workspace/my-gitpod-flutter/android-sdk/" 
+   export FLUTTER_ROOT="/workspace/my-gitpod-flutter/flutter/" 
+   export FLUTTER_HOME="/workspace/my-gitpod-flutter/flutter/" 
       export PATH=$FLUTTER_HOME/bin:$PATH
       mkdir -p /workspace/my-gitpod-flutter/android-sdk
+      mkdir -p /workspace/my-gitpod-flutter/flutter
       touch /workspace/my-gitpod-flutter/android-sdk/repositories.cfg
     init: |
       echo "Installing Flutter SDK..."
+      cd /workspace/my-gitpod-flutter/flutter  
       cd /workspace && wget -qO flutter_sdk.tar.xz https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.9.1+hotfix.4-stable.tar.xz && tar -xf flutter_sdk.tar.xz && rm -f flutter_sdk.tar.xz
-      echo "Init Flutter..."
-      flutter channel master
-      flutter upgrade
-      yes | flutter doctor --android-licenses
       cd /workspace/my-gitpod-flutter  
       touch logs.txt        
       mkdir node-cordova  
@@ -65,10 +68,23 @@ tasks:
               chmod +x a05-flutter-web-app.sh                                                                           && 
 
         
-              
-              echo "Ending .gitpod.yml installation"                 &>> /workspace/my-gitpod-flutter/logs.txt     
-              
+                
+      echo "Init Flutter..."      && 
+      flutter channel master      && 
+      flutter upgrade             && 
+      yes | flutter doctor --android-licenses       && 
+      echo "Ending .gitpod.yml installation"                 &>> /workspace/my-gitpod-flutter/logs.txt
       
+      
+      
+      command:  |    
+   export ANDROID_SDK_ROOT="/workspace/my-gitpod-flutter/android-sdk/" 
+   export ANDROID_HOME="/workspace/my-gitpod-flutter/android-sdk/" 
+   export FLUTTER_ROOT="/workspace/my-gitpod-flutter/flutter/" 
+   export FLUTTER_HOME="/workspace/my-gitpod-flutter/flutter/" 
+   export PATH=$FLUTTER_HOME/bin:$PATH
+   export PATH="${PATH}:/workspace/my-gitpod-flutter:/workspace/my-gitpod-flutter/node-cordova/node_modules:/workspace/my-gitpod-flutter/node-cordova/node_modules/cordova/bin:/workspace/my-gitpod-flutter/node-qrcode/node_modules/qrcode/bin:/workspace/my-gitpod-flutter/node-qrcode/node_modules"                         
+   export PATH="${PATH}:${ANDROID_SDK_ROOT}tools/:${ANDROID_SDK_ROOT}platform-tools/"                   
 
 vscode:
   extensions:
