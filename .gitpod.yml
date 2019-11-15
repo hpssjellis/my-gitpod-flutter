@@ -1,5 +1,10 @@
 image:
   file: .gitpod.dockerfile
+  
+ports:
+  - port: 8001
+  - port: 8080
+         
 
 tasks:
   - before: |
@@ -20,7 +25,6 @@ tasks:
       flutter pub get
       flutter config --enable-web
       flutter doctor
-    command: |
       echo "Ready to go!"  
       echo "Starting .gitpod.yml installation\n\n"           &>> /workspace/my-gitpod-flutter/logs.txt  &&  
      
@@ -65,6 +69,9 @@ tasks:
               echo "Ending .gitpod.yml installation"                 &>> /workspace/my-gitpod-flutter/logs.txt     
               
       
+    command: |
+    
+    echo "Good to go"
 vscode:
   extensions:
     - Dart-Code.dart-code@3.5.0-beta.1:Wg2nTABftVR/Dry4tqeY1w==
