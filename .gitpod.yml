@@ -8,7 +8,6 @@ ports:
 
 tasks:
   - before: |
-  
    export ANDROID_SDK_ROOT="/workspace/my-gitpod-flutter/android-sdk/" 
    export ANDROID_HOME="/workspace/my-gitpod-flutter/android-sdk/" 
    export FLUTTER_ROOT="/workspace/my-gitpod-flutter/flutter/" 
