@@ -13,6 +13,8 @@ https://gitpod.io/#github.com/hpssjellis/my-gitpod-flutter
 
 # Note: Snapshots don't seem to work well. Loading from scratch using the above link seems to be the best method.
 
+On reload the snapshots have a questions. answer  captial "N"  for none! and it may load.
+ 
 or use a pre-made snapshot (made on nov 13th, 2019) only has flutter web app capabilities
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/0ee932d3-1a3a-4212-ad4c-0501a16644a2)
