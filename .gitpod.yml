@@ -69,9 +69,7 @@ tasks:
               echo "Ending .gitpod.yml installation"                 &>> /workspace/my-gitpod-flutter/logs.txt     
               
       
-    command: |
-    
-    echo "Good to go"
+
 vscode:
   extensions:
     - Dart-Code.dart-code@3.5.0-beta.1:Wg2nTABftVR/Dry4tqeY1w==
