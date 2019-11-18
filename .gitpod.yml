@@ -8,10 +8,10 @@ ports:
 
 tasks:
   - before: |
-   export ANDROID_SDK_ROOT="/workspace/my-gitpod-flutter/android-sdk/" 
-   export ANDROID_HOME="/workspace/my-gitpod-flutter/android-sdk/" 
-   export FLUTTER_ROOT="/workspace/my-gitpod-flutter/flutter/" 
-   export FLUTTER_HOME="/workspace/my-gitpod-flutter/flutter/" 
+      export ANDROID_SDK_ROOT="/workspace/my-gitpod-flutter/android-sdk/" 
+      export ANDROID_HOME="/workspace/my-gitpod-flutter/android-sdk/" 
+      export FLUTTER_ROOT="/workspace/my-gitpod-flutter/flutter/" 
+      export FLUTTER_HOME="/workspace/my-gitpod-flutter/flutter/" 
       export PATH=$FLUTTER_HOME/bin:$PATH
       mkdir -p /workspace/my-gitpod-flutter/android-sdk
       mkdir -p /workspace/my-gitpod-flutter/flutter
@@ -77,13 +77,13 @@ tasks:
       
       
       command:  |    
-   export ANDROID_SDK_ROOT="/workspace/my-gitpod-flutter/android-sdk/" 
-   export ANDROID_HOME="/workspace/my-gitpod-flutter/android-sdk/" 
-   export FLUTTER_ROOT="/workspace/my-gitpod-flutter/flutter/" 
-   export FLUTTER_HOME="/workspace/my-gitpod-flutter/flutter/" 
-   export PATH=$FLUTTER_HOME/bin:$PATH
-   export PATH="${PATH}:/workspace/my-gitpod-flutter:/workspace/my-gitpod-flutter/node-cordova/node_modules:/workspace/my-gitpod-flutter/node-cordova/node_modules/cordova/bin:/workspace/my-gitpod-flutter/node-qrcode/node_modules/qrcode/bin:/workspace/my-gitpod-flutter/node-qrcode/node_modules"                         
-   export PATH="${PATH}:${ANDROID_SDK_ROOT}tools/:${ANDROID_SDK_ROOT}platform-tools/"                   
+        export ANDROID_SDK_ROOT="/workspace/my-gitpod-flutter/android-sdk/" 
+        export ANDROID_HOME="/workspace/my-gitpod-flutter/android-sdk/" 
+        export FLUTTER_ROOT="/workspace/my-gitpod-flutter/flutter/" 
+        export FLUTTER_HOME="/workspace/my-gitpod-flutter/flutter/" 
+        export PATH=$FLUTTER_HOME/bin:$PATH
+        export PATH="${PATH}:/workspace/my-gitpod-flutter:/workspace/my-gitpod-flutter/node-cordova/node_modules:/workspace/my-gitpod-flutter/node-cordova/node_modules/cordova/bin:/workspace/my-gitpod-flutter/node-qrcode/node_modules/qrcode/bin:/workspace/my-gitpod-flutter/node-qrcode/node_modules"                         
+        export PATH="${PATH}:${ANDROID_SDK_ROOT}tools/:${ANDROID_SDK_ROOT}platform-tools/"                   
 
 vscode:
   extensions:
