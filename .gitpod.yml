@@ -58,7 +58,7 @@ tasks:
       flutter config --enable-web                                                                           &&
       flutter doctor                                                                                        &&
       echo "Ready to go!"                      &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&  
-      echo "Starting .gitpod.yml install\n"    &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&  
+      echo "Starting .gitpod.yml install"      &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&  
       
       flutter channel master                                                                                && 
       flutter upgrade                                                                                       && 
