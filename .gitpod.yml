@@ -53,8 +53,9 @@ tasks:
       echo "Install the Android SDK"           &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&                 
       wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip                             &&     
       unzip sdk-tools-linux-4333796.zip -d android-sdk                                                      &&            
-      rm sdk-tools-linux-4333796.zip                                                                        &&     
-      ./android-sdk/tools/bin/sdkmanager --list&>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&     
+      rm sdk-tools-linux-4333796.zip                                                                        &&       
+      chmod +x android-sdk/tools/bin/sdkmanager                                                             && 
+      ./android-sdk/tools/bin/sdkmanager --list &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt      &&     
       yes | ./android-sdk/tools/bin/sdkmanager "platform-tools" "build-tools;28.0.3" "platforms;android-28" &&             
                              
             
