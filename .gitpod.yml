@@ -13,11 +13,13 @@ tasks:
       export FLUTTER_ROOT="/workspace/my-gitpod-flutter/flutter/"                                           &&
       export FLUTTER_HOME="/workspace/my-gitpod-flutter/flutter/"                                           &&
       export PATH=$FLUTTER_HOME/bin:$PATH                                                                   &&
-      mkdir -p /workspace/my-gitpod-flutter/android-sdk                                                     &&
-      mkdir -p /workspace/my-gitpod-flutter/flutter                                                         &&
+      mkdir /workspace/my-gitpod-flutter/android-sdk                                                        &&
+      mkdir /workspace/my-gitpod-flutter/flutter                                                            &&
+      mkdir /workspace/my-gitpod-flutter/logs                                                               &&
       touch /workspace/my-gitpod-flutter/android-sdk/repositories.cfg                                       &&
+      touch /workspace/my-gitpod-flutter/logs/installation-logs.txt                                         &&
     init:                                                                                                   &&
-      echo "Installing Flutter SDK..."                                                                      &&
+      echo "Installing Flutter SDK..."                   &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&  
       cd /workspace/my-gitpod-flutter/flutter                                                               &&
       cd /workspace && wget -qO flutter_sdk.tar.xz https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.9.1+hotfix.4-stable.tar.xz && 
       tar -xf flutter_sdk.tar.xz                                                                            &&
@@ -29,40 +31,40 @@ tasks:
       flutter pub get                                                                                       &&
       flutter config --enable-web                                                                           &&
       flutter doctor                                                                                        &&
-      echo "Ready to go!"                                                                                   &&
-      echo "Starting .gitpod.yml installation\n\n"           &>> /workspace/my-gitpod-flutter/logs.txt      &&  
+      echo "Ready to go!"                           &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&  
+      echo "Starting .gitpod.yml installation\n\n"   &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&  
     
       cd /workspace/my-gitpod-flutter                                                                       &&
-      echo "Install the Android SDK"                         &>> /workspace/my-gitpod-flutter/logs.txt      &&                 
+      echo "Install the Android SDK"                          &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&                 
       wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip                             &&     
       unzip sdk-tools-linux-4333796.zip -d android-sdk                                                      &&            
       rm sdk-tools-linux-4333796.zip                                                                        &&     
-      ./android-sdk/tools/bin/sdkmanager --list                  &>> /workspace/my-gitpod-flutter/logs.txt  &&     
+      ./android-sdk/tools/bin/sdkmanager --list                &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&     
       yes | ./android-sdk/tools/bin/sdkmanager "platform-tools" "build-tools;28.0.3" "platforms;android-28" &&             
                       
       export ANDROID_SDK_ROOT="/workspace/my-gitpod-flutter/android-sdk/"                                   &&                        
       export PATH="$PATH:$ANDROID_SDK_ROOTtools/:$ANDROID_SDK_ROOTplatform-tools/"                          &&     
-      echo  $ANDROID_SDK_ROOT                                &>> /workspace/my-gitpod-flutter/logs.txt      &&        
+      echo  $ANDROID_SDK_ROOT                          &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&       
              
       cd /workspace/my-gitpod-flutter                                                                       &&    
-      echo "Install cordova and qrcode using npm"            &>> /workspace/my-gitpod-flutter/logs.txt      &&    
+      echo "Install cordova and qrcode using npm"        &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&   
       npm install --prefix /workspace/my-gitpod-flutter/node-cordova cordova                                &&     
       npm install --prefix /workspace/my-gitpod-flutter/node-qrcode qrcode                                  &&  
       export PATH="$PATH:/workspace/my-gitpod-flutter:/workspace/my-gitpod-flutter/node-cordova/node_modules:/workspace/my-gitpod-flutter/node-cordova/node_modules/cordova/bin:/workspace/my-gitpod-flutter/node-qrcode/node_modules/qrcode/bin:/workspace/my-gitpod-flutter/node-qrcode/node_modules"            &&              
-      echo  $PATH                                            &>> /workspace/my-gitpod-flutter/logs.txt      &&     
+      echo  $PATH                                         &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&     
           
-      echo "Set bash files to runnable"                      &>> /workspace/my-gitpod-flutter/logs.txt      &&                 
+      echo "Set bash files to runnable"                      &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&               
       chmod +x a01-cordova-create.sh                                                                        &&      
       chmod +x a02-cordova-re-build.sh                                                                      &&     
       chmod +x a03-cordova-copy-to-folder.sh                                                                && 
       chmod +x a04-flutter-android-create.sh                                                                && 
       chmod +x a05-flutter-web-app.sh                                                                       && 
             
-      echo "Init Flutter..."                                                                                && 
+      echo "Init Flutter..."                        &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&  
       flutter channel master                                                                                && 
       flutter upgrade                                                                                       && 
       yes | flutter doctor --android-licenses                                                               && 
-      echo "Ending .gitpod.yml installation"                 &>> /workspace/my-gitpod-flutter/logs.txt      &&
+      echo "Ending .gitpod.yml installation"               &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&  
       
     command:                                                                                                &&    
       export ANDROID_SDK_ROOT="/workspace/my-gitpod-flutter/android-sdk/"                                   && 
