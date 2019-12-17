@@ -20,7 +20,7 @@ tasks:
       export FLUTTER_HOME="/workspace/my-gitpod-flutter/flutter/"                                           &&
       export PATH="$PATH:${FLUTTER_HOME}bin/"                                                               &&                       
       export PATH="$PATH:${ANDROID_SDK_ROOT}tools/:${ANDROID_SDK_ROOT}platform-tools/"                      &&     
-      echo   $PATH                             &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&           
+      echo   $PATH                             &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt            
       
       
     init:                                                                                                 
