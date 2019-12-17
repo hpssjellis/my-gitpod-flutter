@@ -2,13 +2,13 @@ image:
   file: .gitpod.dockerfile
 
 tasks:
-  - before: |
+  - before: 
       export PATH=$FLUTTER_HOME/bin:$PATH                    &&
       mkdir -p /workspace/my-gitpod-flutter/android-sdk                  &&
       mkdir -p /workspace/my-gitpod-flutter/logs                  &&
       touch /workspace/my-gitpod-flutter/android-sdk/repositories.cfg                  &&
-      touch /workspace/my-gitpod-flutter/logs/installation-logs.txt                  &&
-    init:      |             
+      touch /workspace/my-gitpod-flutter/logs/installation-logs.txt                  
+    init:                  
       echo "Installing Flutter SDK..."                &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&  
       cd /workspace && wget -qO flutter_sdk.tar.xz https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.9.1+hotfix.4-stable.tar.xz && tar -xf flutter_sdk.tar.xz && rm -f flutter_sdk.tar.xz                     &&
       echo "Init Flutter..."                  &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&  
@@ -20,8 +20,8 @@ tasks:
       mkdir node-qrcode                   &&
       flutter pub get                  &&
       flutter config --enable-web                  &&
-      flutter doctor                  &&
-    command:    |               
+      flutter doctor                  
+    command:                  
       echo "Ready to go!"                    &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&  
       echo "Starting .gitpod.yml installation\n\n"           &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&  
      
@@ -64,7 +64,7 @@ tasks:
               ln -s /workspace/flutter flutter-folder   &&
         
               
-              echo "Ending .gitpod.yml installation"                 &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt                     &&  
+              echo "Ending .gitpod.yml installation"                 &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt                  
               
       
 vscode:
