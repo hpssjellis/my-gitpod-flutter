@@ -23,6 +23,10 @@ Or load a pre-made snapshot. May have to enter "N" for None updates. Older
 
 
 
+The main gitpod flutter has also got issues
+
+https://github.com/gitpod-io/flutter_stock_example
+
 
 
 
