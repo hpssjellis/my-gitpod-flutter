@@ -51,6 +51,28 @@ tasks:
             
    
             
+      
+      
+      cd /workspace/my-gitpod-flutter/                                                                      &&
+      
+      #deletes the new java
+      export PATH=${PATH/':/home/gitpod/.sdkman/candidates/java/current/bin'/}   &&
+
+      #sets old java 8 only for present window
+      export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64/   &&
+      export PATH=$PATH:$JAVA_HOME                              &&
+
+      echo "Install the Android SDK"           &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&                 
+      wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip                             &&     
+      unzip sdk-tools-linux-4333796.zip -d android-sdk                                                      &&            
+      rm sdk-tools-linux-4333796.zip                                                                        &&     
+      chmod -R 775 /workspace/my-gitpod-flutter/android-sdk                                                 &&
+      ./workspace/my-gitpod-flutter/android-sdk/tools/bin/sdkmanager --list &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt      &&     
+      yes | ./workspace/my-gitpod-flutter/android-sdk/tools/bin/sdkmanager "platform-tools" "build-tools;28.0.3" "platforms;android-28" &&             
+                             
+         
+      
+      
             
       echo "Init Flutter..."                   &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  && 
       
@@ -63,20 +85,6 @@ tasks:
       flutter channel master                                                                                && 
       flutter upgrade                                                                                       && 
       yes | flutter doctor --android-licenses                                                               && 
-      
-      
-      
-      cd /workspace/my-gitpod-flutter/                                                                      &&
-      echo "Install the Android SDK"           &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&                 
-      wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip                             &&     
-      unzip sdk-tools-linux-4333796.zip -d android-sdk                                                      &&            
-      rm sdk-tools-linux-4333796.zip                                                                        &&     
-      chmod -R 775 /workspace/my-gitpod-flutter/android-sdk                                                 &&
-      ./workspace/my-gitpod-flutter/android-sdk/tools/bin/sdkmanager --list &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt      &&     
-      yes | ./workspace/my-gitpod-flutter/android-sdk/tools/bin/sdkmanager "platform-tools" "build-tools;28.0.3" "platforms;android-28" &&             
-                             
-         
-      
       
       
       
