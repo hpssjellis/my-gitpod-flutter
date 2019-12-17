@@ -12,7 +12,7 @@ tasks:
       export ANDROID_HOME="/workspace/my-gitpod-flutter/android-sdk/"                                       &&
       export FLUTTER_ROOT="/workspace/my-gitpod-flutter/flutter/"                                           &&
       export FLUTTER_HOME="/workspace/my-gitpod-flutter/flutter/"                                           &&
-      export PATH=$PATH:${FLUTTER_HOME}bin/                                                                &&
+      export PATH="$PATH:${FLUTTER_HOME}bin/"                                                               &&
       mkdir /workspace/my-gitpod-flutter/android-sdk                                                        &&
       mkdir /workspace/my-gitpod-flutter/flutter                                                            &&
       mkdir /workspace/my-gitpod-flutter/logs                                                               &&
@@ -79,9 +79,9 @@ tasks:
       export ANDROID_HOME="/workspace/my-gitpod-flutter/android-sdk/"                                       && 
       export FLUTTER_ROOT="/workspace/my-gitpod-flutter/flutter/"                                           && 
       export FLUTTER_HOME="/workspace/my-gitpod-flutter/flutter/"                                           && 
-      export PATH=$FLUTTER_HOME/bin:$PATH                                                                   && 
+      export PATH="$PATH:${FLUTTER_HOME}bin/"                                                               && 
       export PATH="$PATH:/workspace/my-gitpod-flutter:/workspace/my-gitpod-flutter/node-cordova/node_modules:/workspace/my-gitpod-flutter/node-cordova/node_modules/cordova/bin:/workspace/my-gitpod-flutter/node-qrcode/node_modules/qrcode/bin:/workspace/my-gitpod-flutter/node-qrcode/node_modules"   &&                      
-      export PATH="$PATH:$ANDROID_SDK_ROOTtools/:$ANDROID_SDK_ROOTplatform-tools/"                                          
+      export PATH="$PATH:${ANDROID_SDK_ROOT}tools/:${ANDROID_SDK_ROOT}platform-tools/"                                          
 
 
 
