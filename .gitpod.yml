@@ -33,14 +33,7 @@ tasks:
       mkdir node-cordova                                                                                    &&
       mkdir node-qrcode                                                                                     &&
     
-      cd /workspace/my-gitpod-flutter/                                                                      &&
-      echo "Install the Android SDK"           &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&                 
-      wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip                             &&     
-      unzip sdk-tools-linux-4333796.zip -d android-sdk                                                      &&            
-      rm sdk-tools-linux-4333796.zip                                                                        &&     
-      ./android-sdk/tools/bin/sdkmanager --list&>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&     
-      yes | ./android-sdk/tools/bin/sdkmanager "platform-tools" "build-tools;28.0.3" "platforms;android-28" &&             
-                       
+
              
       cd /workspace/my-gitpod-flutter                                                                       &&    
       echo "Install cordova, qrcode using npm" &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&   
@@ -55,6 +48,17 @@ tasks:
       chmod +x a03-cordova-copy-to-folder.sh                                                                && 
       chmod +x a04-flutter-android-create.sh                                                                && 
       chmod +x a05-flutter-web-app.sh                                                                       && 
+            
+      cd /workspace/my-gitpod-flutter/                                                                      &&
+      echo "Install the Android SDK"           &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&                 
+      wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip                             &&     
+      unzip sdk-tools-linux-4333796.zip -d android-sdk                                                      &&            
+      rm sdk-tools-linux-4333796.zip                                                                        &&     
+      ./android-sdk/tools/bin/sdkmanager --list&>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&     
+      yes | ./android-sdk/tools/bin/sdkmanager "platform-tools" "build-tools;28.0.3" "platforms;android-28" &&             
+                             
+            
+            
             
       echo "Init Flutter..."                   &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  && 
       
