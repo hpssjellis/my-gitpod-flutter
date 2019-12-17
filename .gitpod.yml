@@ -12,7 +12,7 @@ tasks:
       export ANDROID_HOME="/workspace/my-gitpod-flutter/android-sdk/"                                       &&
       export FLUTTER_ROOT="/workspace/my-gitpod-flutter/flutter/"                                           &&
       export FLUTTER_HOME="/workspace/my-gitpod-flutter/flutter/"                                           &&
-      export PATH=${FLUTTER_HOME}/bin:$PATH                                                                 &&
+      export PATH=$PATH:${FLUTTER_HOME}bin/                                                                &&
       mkdir /workspace/my-gitpod-flutter/android-sdk                                                        &&
       mkdir /workspace/my-gitpod-flutter/flutter                                                            &&
       mkdir /workspace/my-gitpod-flutter/logs                                                               &&
