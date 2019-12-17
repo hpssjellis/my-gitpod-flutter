@@ -1,4 +1,4 @@
-
+#!/bin/bash
 
       #deletes the new java
       export PATH=${PATH/':/home/gitpod/.sdkman/candidates/java/current/bin'/}   
