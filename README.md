@@ -10,23 +10,13 @@ For a fresh gitpod click (under development Nov 11, 2019, working nov 13th)
 https://gitpod.io/#github.com/hpssjellis/my-gitpod-flutter
 
 
-Dec 15th, 2019 Snapshot
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/f203755e-3993-4147-afa4-f0ce8294e1f8)
-
-
-
-
-
-Or load a pre-made snapshot. May have to enter "N" for None updates. Older
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/c0149a64-6fb6-454b-9648-01adfa0d45ed)
-
-
 
 The main gitpod flutter has also got issues
 
 https://github.com/gitpod-io/flutter_stock_example
 
+Dec 17, 2019
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/9a766d1c-b416-4a24-a398-acae01e2c761)
 
 
 
