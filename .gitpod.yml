@@ -25,7 +25,7 @@ tasks:
       
     init:                                                                                                 
       echo "Installing Flutter SDK..."         &>> /workspace/my-gitpod-flutter/logs/installation-logs.txt  &&  
-      cd /workspace/my-gitpod-flutter/flutter                                                               &&
+      cd /workspace/my-gitpod-flutter                                                                       &&
       wget -qO flutter_sdk.tar.xz https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.9.1+hotfix.4-stable.tar.xz && 
       tar -xf flutter_sdk.tar.xz                                                                            &&
       rm -f flutter_sdk.tar.xz                                                                              &&
