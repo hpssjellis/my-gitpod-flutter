@@ -48,6 +48,7 @@ tasks:
       chmod +x a03-cordova-copy-to-folder.sh                                                                && 
       chmod +x a04-flutter-android-create.sh                                                                && 
       chmod +x a05-flutter-web-app.sh                                                                       && 
+      chmod +x a06-set-path.sh                                                                              && 
             
    
             
